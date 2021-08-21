@@ -253,6 +253,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 530f8a483e5972f44a4a64110e1696ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  h: {fileID: 1543071120}
+  maxhealth: 100
+  currenthealth: 0
   traansform: {fileID: 193249726}
   movespeed: 5
   animator: {fileID: 193249724}
@@ -596,7 +599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7058824, g: 0.23360862, b: 0.14901958, a: 1}
+  m_Color: {r: 0.14901958, g: 0.7058824, b: 0.19489291, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -655,7 +658,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -165.9, y: -50.2}
+  m_AnchoredPosition: {x: -165.9, y: -47.407}
   m_SizeDelta: {x: 307.76855, y: 80.63448}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1080611080
@@ -937,7 +940,7 @@ MonoBehaviour:
   slider: {fileID: 1543071121}
   gradient:
     serializedVersion: 2
-    key0: {r: 0.9056604, g: 0.14097545, b: 0.14097545, a: 1}
+    key0: {r: 0.8207547, g: 0.027100407, b: 0.20406605, a: 1}
     key1: {r: 0.8748365, g: 0.9150943, b: 0.41006586, a: 1}
     key2: {r: 1, g: 0.9811321, b: 0.31933072, a: 0}
     key3: {r: 0.24563903, g: 0.754717, b: 0.3048633, a: 0}
@@ -945,15 +948,15 @@ MonoBehaviour:
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 15227
-    ctime1: 24094
+    ctime0: 1542
+    ctime1: 38165
     ctime2: 38743
-    ctime3: 49922
+    ctime3: 63800
     ctime4: 0
     ctime5: 0
     ctime6: 0
     ctime7: 0
-    atime0: 0
+    atime0: 1349
     atime1: 65535
     atime2: 0
     atime3: 0
