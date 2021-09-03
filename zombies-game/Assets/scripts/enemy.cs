@@ -8,6 +8,11 @@ public class enemyRotation : MonoBehaviour
     // Start is called before the first frame update
 
     public AIPath aipath;
+    
+    private void Start()
+    {
+       // aipath.velocity = Random.Range(3, 100);
+    }
     // Update is called once per frame
     void Update()
     {
