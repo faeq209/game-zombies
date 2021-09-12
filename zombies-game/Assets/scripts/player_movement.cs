@@ -15,10 +15,13 @@ public class player_movement : MonoBehaviour
     Vector2 temp;
 
     public GameObject losingtext;
+    public GameObject enemyprefab;
+    public float spawnRate;
+    float nextspawn;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag.Equals("enemy")){ 
+        if (collision.gameObject.tag.Equals("enemy")) {
 
             this.gameObject.SetActive(false);
             losingtext.SetActive(true);
@@ -30,8 +33,9 @@ public class player_movement : MonoBehaviour
         currenthealth = maxhealth;
         h.setmaxhealth(maxhealth);
     }
-   
+
     void Update()
+        
     {//if (Input.GetKeyDown(KeyCode.Space)) takedamage(20);
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
@@ -56,6 +60,13 @@ public class player_movement : MonoBehaviour
             transform.localScale = temp;
 
         }
+        if (Time.time>nextspawn)
+        {
+            nextspawn = Time.time + spawnRate;
+            Instantiate(enemyprefab);
+
+
+        }
     }
     void FixedUpdate()
     {
@@ -64,6 +75,7 @@ public class player_movement : MonoBehaviour
     void takedamage(float damage)
     {
         currenthealth -= damage* Time.fixedDeltaTime;
+        if (currenthealth == 0) { losingtext.SetActive(true); }
         h.sethealth(currenthealth);
     }
 }
