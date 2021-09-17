@@ -15,20 +15,22 @@ public class player_movement : MonoBehaviour
     Vector2 temp;
 
     public GameObject losingtext;
-    public GameObject enemyprefab;
+    private GameObject enemyprefab;
     public float spawnRate;
     float nextspawn;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag.Equals("enemy")) {
+       if (collision.gameObject.tag.Equals("enemy")) {
 
-            this.gameObject.SetActive(false);
+           this.gameObject.SetActive(false);
             losingtext.SetActive(true);
         }
     }
     void Start()
+        
     {
+        enemyprefab = GameObject.FindGameObjectWithTag("enemy");
         losingtext.SetActive(false);
         currenthealth = maxhealth;
         h.setmaxhealth(maxhealth);
