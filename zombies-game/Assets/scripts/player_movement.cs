@@ -24,21 +24,25 @@ public class player_movement : MonoBehaviour
        if (collision.gameObject.tag.Equals("enemy")) {
 
            this.gameObject.SetActive(false);
+            FindObjectOfType<AudioManager>().Play("heavy_domination17_nO1yGmL");
             losingtext.SetActive(true);
         }
     }
     void Start()
         
     {
+        FindObjectOfType<AudioManager>().Play("running-footstep-sound-effect");
         enemyprefab = GameObject.FindGameObjectWithTag("enemy");
         losingtext.SetActive(false);
         currenthealth = maxhealth;
         h.setmaxhealth(maxhealth);
+        
     }
 
     void Update()
-        
-    {//if (Input.GetKeyDown(KeyCode.Space)) takedamage(20);
+
+    {
+        //if (Input.GetKeyDown(KeyCode.Space)) takedamage(20);
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("horizontal", movement.x);

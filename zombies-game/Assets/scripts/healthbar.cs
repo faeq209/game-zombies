@@ -30,8 +30,7 @@ public class healthbar : MonoBehaviour
     }
     private void Awake()
     {
-        losingtext.SetActive(false); 
+        losingtext.SetActive(false);
     }
 
 }
-
